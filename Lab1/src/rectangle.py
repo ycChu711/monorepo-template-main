@@ -5,13 +5,28 @@
  Note that there is no constructor or destructor,
  so a default one will be created for us.
 """
-class Rectangle:
+
+class Shape:
+    def __init__(self):
+        pass
     def set_values(self, x, y):
-        self.width = x
-        self.height = y
+        pass
+    def area(self):
+        pass
+
+
+class Rectangle:
+
+    def __init__(self, width, height):
+        self._width = width
+        self._height = height
+
+    def set_values(self, x, y):
+        self._width = x
+        self._height = y
 
     def area(self):
-        return self.width * self.height
+        return self._width * self._height
 
 
 if __name__ == "__main__":
